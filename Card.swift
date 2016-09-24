@@ -446,3 +446,48 @@ class BlackCard : SKSpriteNode {
         super.init(texture: frontTexture, color: UIColor.clear, size: frontTexture.size())
     }
 }
+
+class StartGame {
+
+    func generateStartingDeck () -> Array<String> {
+        
+        let possibleColors = ["Blue", "Red", "Green", "Purple", "Yellow", "Black"]
+        let possibleValues = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
+        
+        var initialDeck = [""]
+        
+        for i in 1...8 {
+            let color = possibleColors[Int(arc4random_uniform(6))]
+            let value = possibleValues[Int(arc4random_uniform(16))]
+    
+            switch color {
+            case "Blue", "Red", "Green", "Purple", "Yellow", "Black":
+                initialDeck[i] += color; break
+            default:
+                initialDeck[i] = "error"
+            }
+            
+            switch value {
+            case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F":
+                initialDeck[i] += value; break
+            default:
+                initialDeck[i] = "error"
+            }
+        }
+        
+        return initialDeck
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
