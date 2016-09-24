@@ -8,6 +8,7 @@
 
 import Foundation
 import SpriteKit
+@testable import Hexo
 
 enum BlueCardType : Int {
     case Zero,
