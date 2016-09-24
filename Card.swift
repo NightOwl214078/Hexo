@@ -20,7 +20,6 @@ enum BlueCardType : Int {
     Seven,
     Eight,
     Nine,
-    Ten,
     A,
     B,
     C,
